@@ -4,19 +4,21 @@
 
 *   `X` Features
 *   `Y` Labels
-*   prediction function , $\theta$
+*   $\text{prediction function , }\theta$
 *   repeat:
-    *   `X` $\rightarrow$ prediction function ($\theta, X$) $\rightarrow \hat{Y}$ 
-    *   Cost $\hat{Y}$ vs $Y$ $\xrightarrow{\text{minimize}}$ update $\theta$
+    *   $X \rightarrow \text{ prediction function }(\theta, X) \rightarrow \hat{Y}$ 
+    *   $\text{Cost }\hat{Y}\text{ vs }Y \xrightarrow{\text{minimize}}\text{ update }\theta$
 
 ### Sentiment in Tweets
 
 #### Using Sparse representation
-*   Tweets = $[\text{tweet}_1, \text{tweet}_2, \text{... }, \text{tweet}_n]$
-*   Vocabluaries creation $V = [\text{v}_1, \text{v}_2, \text{... }, \text{v}_{|V|}]$
+*   $\text{Tweets = }[\text{tweet}_1, \text{tweet}_2, \text{... }, \text{tweet}_n]$
+*   Vocabluaries creation 
+$$V = [\text{v}_1, \text{v}_2, \text{... }, \text{v}_{|V|}]$$
 *   represent each tweet using $\text{Sparse representation}$
 *   I am happy $\longrightarrow [\text{0, 0, ..., 0, 0},\text{1},\text{0, 0, ..., 0, 0},\text{1},\text{0, 0, ..., 0, 0},\text{1},\text{0, 0, ..., 0, 0}]$
-*   $\theta = [\theta_0, \theta_1, \text{... }, \theta_{|V|}]\text{ } \xrightarrow{\text{problems}}$ $$\begin{cases} \text{large training time} \\ \text{large prediction time} \end{cases}$$
+*   $\theta = [\theta_0, \theta_1, \text{... }, \theta_{|V|}]\text{ } \xrightarrow{\text{problems}}$ 
+$$\begin{cases} \text{large training time} \\ \text{large prediction time} \end{cases}$$
 #### Using frequency
 *   Tweets = $[\text{tweet}_1, \text{tweet}_2, \text{... }, \text{tweet}_n]$
 *   Vocabluaries creation $V = [\text{v}_1, \text{v}_2, \text{... }, \text{v}_{|V|}]$
