@@ -13,12 +13,10 @@
 
 #### Using Sparse representation
 *   $\text{Tweets = }[\text{tweet}_1, \text{tweet}_2, \text{... }, \text{tweet}_n]$
-*   Vocabluaries creation 
-$$V = [\text{v}_1, \text{v}_2, \text{... }, \text{v}_{|V|}]$$
+*   Vocabluaries creation $V = [\text{v}_1, \text{v}_2, \text{... }, \text{v}_{|V|}]$
 *   represent each tweet using $\text{Sparse representation}$
 *   I am happy $\longrightarrow [\text{0, 0, ..., 0, 0},\text{1},\text{0, 0, ..., 0, 0},\text{1},\text{0, 0, ..., 0, 0},\text{1},\text{0, 0, ..., 0, 0}]$
-*   $\theta = [\theta_0, \theta_1, \text{... }, \theta_{|V|}]\text{ } \xrightarrow{\text{problems}}$ 
-$$\begin{cases} \text{large training time} \\ \text{large prediction time} \end{cases}$$
+*   $\theta = [\theta_0, \theta_1, \text{... }, \theta_{|V|}]\text{ } \xrightarrow{\text{problems}}\begin{cases} \text{large training time} \\ \text{large prediction time} \end{cases}$
 #### Using frequency
 *   Tweets = $[\text{tweet}_1, \text{tweet}_2, \text{... }, \text{tweet}_n]$
 *   Vocabluaries creation $V = [\text{v}_1, \text{v}_2, \text{... }, \text{v}_{|V|}]$
@@ -50,6 +48,4 @@ $$\begin{cases} \text{large training time} \\ \text{large prediction time} \end{
     *   $log(a*b) = log(a) \text{ + } log(b)$
     *   $log(\frac{P(+)}{P(-)}) + \sum_{\text{w}}^{\text{tweet}}log(\text{ratio}_{\text{w}})$
     *   $\lambda_{\text{w}} =  log(\text{ratio}_{\text{w}})$
-    *   $$\begin{cases}\large{log(\frac{P(+)}{P(-)}) + \sum_{\text{w}}^{\text{tweet}}log(\text{ratio}_{\text{w}}) > 0} & + \\  \text{O.W} & -\end{cases}$$
-
-
+    *   prediction $\begin{cases}\large{log(\frac{P(+)}{P(-)}) + \sum_{\text{w}}^{\text{tweet}}log(\text{ratio}_{\text{w}}) > 0} & + \\  \text{O.W} & -\end{cases}$
